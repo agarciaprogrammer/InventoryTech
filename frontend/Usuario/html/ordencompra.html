@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Orden de Compra</h3>
+          <div class="search-container">
+            <input type="text" placeholder="Buscar productos..." />
+            <a href="#">filtros</a>
+          </div>
+        </div>
+        <table id="table">
+          <thead>
+            <th>Seleccionar</th>
+            <th>Codigo de Barras</th>
+            <th>Producto</th>
+            <th>Categoria</th>
+            <th>Cantidad</th>
+            <th>Precio Unitario</th>
+            <th>Proveedor</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="pagination">
+          <button class="btnPag" id="prevPage">Prev</button>
+          <button class="btnPag" id="nextPage">Next</button>
+        </div>
+        <div class="sales-section">
+          <h3>Valor Total:</h3>
+
+          <div class="search-container">
+            <p class="valortotal"></p>
+          </div>
+        </div>
+
+        <button class="export-btn confirmar-btn">Confirmar compra</button>
+        <button class="export-btn rechazar-btn">Rechazar compra</button>
+      </div>
+    </div>
+    <script src="../js/ordencompra.js"></script>
+    <script src="../js/salir.js"></script>
+  </body>
+</html>

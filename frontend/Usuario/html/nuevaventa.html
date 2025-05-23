@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card nueva-venta-card">
+        <h2>Nueva Venta</h2>
+
+        <form class="venta-form">
+          <div class="form-group">
+            <label for="producto">Nombre de producto:</label>
+            <input type="text" id="producto" name="producto" />
+            <div id="sugerencias" class="sugerencias"></div>
+            <input
+              type="number"
+              id="cantidad"
+              name="cantidad"
+              placeholder="Cantidad"
+            />
+            <button type="submit" class="btn agregar-btn">AGREGAR</button>
+          </div>
+          <div class="producto-lista">
+            <table id="tablaProductos">
+              <thead>
+                <tr>
+                  <th>CodBarra</th>
+                  <th>Producto</th>
+                  <th>Marca</th>
+                  <th>PrecioUnitario</th>
+                  <th>Vencimiento</th>
+                  <th>Cantidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Los datos se insertarán aquí mediante JavaScript -->
+              </tbody>
+            </table>
+          </div>
+
+          <button type="button" class="btn finalizar-btn">FINALIZAR</button>
+        </form>
+      </div>
+    </div>
+    <script src="../js/nuevaventa.js"></script>
+    <script src="../js/salir.js"></script>
+  </body>
+</html>

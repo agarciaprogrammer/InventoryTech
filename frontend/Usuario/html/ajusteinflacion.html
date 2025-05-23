@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Ajuste de precios por Inflación</h3>
+        </div>
+        <table id="table">
+          <thead>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Categorias Afectadas</th>
+            <th>Valor de Inflación</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="sales-section">
+          <h3>Inflación semanal</h3>
+
+          <select name="categoria" id="categoria">
+            <option value="0">Todas las Categorias</option>
+            <option value="1" label="Carnes">Carnes</option>
+            <option value="2" label="Lacteos">Lacteos</option>
+            <option value="3" label="Bebidas con Alcohol">
+              Bebidas con Alcohol
+            </option>
+            <option value="4" label="Bebidas sin Alcohol">
+              Bebidas sin Alcohol
+            </option>
+            <option value="5" label="Limpieza">Limpieza</option>
+            <option value="6" label="Congelados">Congelados</option>
+            <option value="7" label="Frutas y Verduras">
+              Frutas y Verduras
+            </option>
+            <option value="8" label="Higiene y Salud">Higiene y Salud</option>
+            <option value="9" label="Golosinas y Chocolates">
+              Golosinas y Chocolates
+            </option>
+            <option value="10" label="Mascotas">Mascotas</option>
+          </select>
+
+          <div class="search-container">
+            <input
+              id="inflacionInput"
+              type="text"
+              placeholder="Ingresar valor de inflación"
+            />
+          </div>
+        </div>
+
+        <button class="export-btn inflacionbtn">
+          Confirmar actualización <br />
+          de los productos
+        </button>
+      </div>
+    </div>
+    <script src="../js/inflacion.js"></script>
+    <script src="../js/salir.js"></script>
+  </body>
+</html>

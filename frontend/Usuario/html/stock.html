@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <h3>Stock</h3>
+            <button
+              id="helpButton"
+              style="
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              "
+              title="Ayuda"
+            >
+              ?
+            </button>
+          </div>
+          <div
+            id="helpText"
+            style="display: none; margin-top: 10px; color: #555"
+          ></div>
+          <div class="search-container">
+            <input type="text" placeholder="Buscar productos..." />
+            <a href="#">filtros</a>
+          </div>
+        </div>
+        <br />
+
+        <table id="table">
+          <thead>
+            <th>Seleccionar</th>
+            <th>Codigo de Barras</th>
+            <th>Producto</th>
+            <th>Marca</th>
+            <th>Categoria</th>
+            <th>Precio Unitario</th>
+            <th>Stock</th>
+            <th>Vencimiento</th>
+            <th>Proveedor</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <br />
+        <div class="pagination">
+          <button class="btnPag" id="prevPage">Prev</button>
+          <button class="btnPag" id="nextPage">Next</button>
+        </div>
+        <div class="card-footer">
+          <a class="btn" href="agregarproducto.html">Agregar producto</a>
+          <button class="btn" id="borrarProductoBtn">Borrar producto</button>
+          <button class="btn" id="modificarProductoBtn">
+            Modificar producto
+          </button>
+
+          <a class="btn" href="limitestock.html">Limite minimo de stock</a>
+          <a class="btn" href="ordencompra.html">Orden de compra</a>
+        </div>
+      </div>
+    </div>
+    <script src="../js/paginacion.js"></script>
+    <script type="module" src="../js/stock.js"></script>
+    <script src="../js/salir.js"></script>
+    <script>
+      document.getElementById("helpButton").addEventListener("click", () => {
+        const helpTextVentas = document.getElementById("helpText");
+        helpTextVentas.innerHTML = `Puedes ver el stock de los productos. <br/> Puedes buscar los productos en el rectángulo de la derecha.`;
+
+        if (helpTextVentas.style.display === "none") {
+          helpTextVentas.style.display = "block";
+        } else {
+          helpTextVentas.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

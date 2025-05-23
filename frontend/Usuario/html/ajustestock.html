@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Ajuste de Stock en Góndolas</h3>
+          <span class="filter-link">filtros</span>
+        </div>
+
+        <table id="table">
+          <thead>
+            <th>Seleccionar</th>
+            <th>Codigo de Barras</th>
+            <th>Producto</th>
+            <th>Categoria</th>
+            <th>Stock Anterior</th>
+            <th><strong>Stock Sugerido</strong></th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <br />
+        <div class="pagination">
+          <button class="btnPag" id="prevPage">Prev</button>
+          <button class="btnPag" id="nextPage">Next</button>
+        </div>
+
+        <button class="export-btn ajusteStockBtn">Confirmar todo</button>
+      </div>
+    </div>
+    <script src="../js/ajustestock.js"></script>
+    <script src="../js/salir.js"></script>
+  </body>
+</html>

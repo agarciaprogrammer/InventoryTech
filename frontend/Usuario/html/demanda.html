@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <h3>Demanda del día proyectada</h3>
+            <button
+              id="helpButton"
+              style="
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              "
+              title="Ayuda"
+            >
+              ?
+            </button>
+          </div>
+          <div
+            id="helpText"
+            style="display: none; margin-top: 10px; color: #555"
+          ></div>
+
+          <span id="diadehoy"><strong> </strong></span>
+        </div>
+        <label for="fecha1">Fecha de Inicio:</label>
+        <input type="date" id="fecha1" name="fecha1" />
+        <br />
+        <label for="fecha1">Hasta Hoy:</label>
+        <label id="fecha2"></label>
+        <br />
+        <br />
+        <button class="export-btn btn-demanda" id="calculate-btn">
+          Calcular
+        </button>
+        <div class="card-content">
+          <div class="demand-section">
+            <h4>Categorías con aumento de demanda</h4>
+            <div class="demand-section aumento"></div>
+          </div>
+          <div class="demand-section">
+            <h4>Categorías con disminucion de demanda</h4>
+            <div class="demand-section disminucion"></div>
+          </div>
+        </div>
+      </div>
+      <div class="demanda-footer card-footer">
+        <a class="btn" href="ajustestock.html">Ajustar Stock</a>
+        <a class="btn" href="ajusteprecios.html">Ajustar Precios</a>
+        <a class="btn" href="ajusteinflacion.html">Ajustar Inflacion</a>
+      </div>
+    </div>
+    <script src="../js/demandaFront.js"></script>
+    <script src="../js/salir.js"></script>
+    <script>
+      document.getElementById("helpButton").addEventListener("click", () => {
+        const helpText = document.getElementById("helpText");
+        helpText.innerHTML = `
+    En esta pantalla, debes poner la fecha de inicio para el cálculo de la demanda para el dia de hoy. <br/> Recomendamos poner mínimo 4 meses entre fechas para un cálculo más preciso. <br/> Es recomendable tener al menos 100 ventas antes de calcular la demanda proyectada.
+  `;
+
+        if (helpText.style.display === "none") {
+          helpText.style.display = "block";
+        } else {
+          helpText.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

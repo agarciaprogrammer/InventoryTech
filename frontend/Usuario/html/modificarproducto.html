@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card agregar-producto-card">
+        <h2>Modificar producto</h2>
+        <form>
+          <div class="form-group">
+            <label for="codigo">Codigo de Barras</label>
+            <input type="text" id="codigo" name="codigo" />
+          </div>
+          <div class="form-group">
+            <label for="nombre">Producto</label>
+            <input type="text" id="nombre" name="nombre" />
+          </div>
+          <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" />
+          </div>
+          <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <select name="categoria" id="categoria">
+              <option value="0">Seleccionar una categoria</option>
+              <option value="1" label="Carnes">Carnes</option>
+              <option value="2" label="Lacteos">Lacteos</option>
+              <option value="3" label="Bebidas con Alcohol">
+                Bebidas con Alcohol
+              </option>
+              <option value="4" label="Bebidas sin Alcohol">
+                Bebidas sin Alcohol
+              </option>
+              <option value="5" label="Limpieza">Limpieza</option>
+              <option value="6" label="Congelados">Congelados</option>
+              <option value="7" label="Frutas y Verduras">
+                Frutas y Verduras
+              </option>
+              <option value="8" label="Higiene y Salud">Higiene y Salud</option>
+              <option value="9" label="Golosinas y Chocolates">
+                Golosinas y Chocolates
+              </option>
+              <option value="10" label="Mascotas">Mascotas</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="precio">Precio de venta</label>
+            <input type="number" id="precio" name="precio" />
+          </div>
+          <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="number" id="stock" name="stock" />
+          </div>
+          <div class="form-group">
+            <label for="vencimiento">Vencimiento</label>
+            <input type="date" id="vencimiento" name="vencimiento" />
+          </div>
+          <div class="form-group">
+            <label for="proveedor">Proveedor</label>
+            <input type="text" id="proveedor" name="proveedor" />
+          </div>
+          <button type="submit" class="btn confirmar-btn">Confirmar</button>
+        </form>
+      </div>
+    </div>
+    <script src="../js/modificarproducto.js"></script>
+    <script src="../js/salir.js"></script>
+  </body>
+</html>

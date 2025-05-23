@@ -1,0 +1,524 @@
+body {
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  display: flex;
+}
+
+.vertical-navbar {
+  background-color: #fff;
+  padding: 3rem 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  position: fixed;
+}
+
+.vertical-navbar a {
+  font-weight: bold;
+  margin: 5rem 0rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.a h2 {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.vertical-navbar ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  font-size: 2vh;
+  transition: color 0.3s;
+}
+
+.vertical-navbar li {
+  margin: 3rem 0;
+}
+
+.vertical-navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+}
+
+.vertical-navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s;
+}
+.vertical-navbar a:hover::after,
+.vertical-navbar a.active::after {
+  width: 100%;
+}
+.vertical-navbar a:hover,
+.vertical-navbar a.active {
+  color: #007bff;
+}
+
+.main-content {
+  margin-left: 20vh;
+  padding: 0;
+  flex-grow: 1;
+  background-color: #f3f3f3;
+  min-height: 100vh;
+}
+
+.horizontal-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem 3rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.horizontal-navbar h1 {
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: #ccc;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+
+/* */
+
+.card {
+  background-color: white;
+  margin: 1rem 4rem;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.card-header .period {
+  font-weight: bold;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 1rem 10rem 10rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  height: 6px;
+}
+
+.table-header-permisos {
+  width: 30.5%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 1rem 10rem 10rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  height: 6px;
+}
+
+.export-btn {
+  background-color: #ccc;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.sales-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sales-section h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+}
+
+.search-container a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.table-placeholder {
+  background-color: #f0f0f0;
+  height: 300px; /* Adjust height as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  color: #888;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-footer button {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.card-content-venta {
+  margin-bottom: 1rem;
+}
+
+.filter-link {
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* BALANCE */
+.balance-card {
+  padding: 1rem 2.5rem;
+  margin: 1rem 4rem;
+}
+
+.balance-card h3 {
+  font-size: 1.5rem;
+}
+
+.balance-period {
+  margin-bottom: 2rem;
+}
+
+.balance-period-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.balance-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.balance-item {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
+}
+
+.balance-positive {
+  color: green;
+  font-weight: bold;
+}
+
+.balance-negative {
+  color: red;
+  font-weight: bold;
+}
+
+.balance-neutral {
+  font-weight: bold;
+}
+
+/* NUEVA VENTA */
+/* Estilos específicos para la tarjeta "Nueva Venta" */
+.nueva-venta-card {
+  width: 70%;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.nueva-venta-card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.venta-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  flex: 1;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 2;
+}
+
+.form-group .agregar-btn {
+  padding: 0.5rem 1rem;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.producto-lista {
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: white;
+}
+
+.finalizar-btn {
+  align-self: flex-start;
+  padding: 0.5rem 2rem;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 10%;
+}
+.container h1 {
+  font-size: 3rem;
+}
+
+/* AGREGAR PRODUCTO */
+.agregar-producto-card {
+  width: 85%;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-family: "Arial", sans-serif;
+}
+
+.agregar-producto-card h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-size: 1.2rem;
+  flex: 1;
+  text-align: left;
+}
+
+.form-group input {
+  flex: 2;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+
+.confirmar-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+.btnPag {
+  background-color: #8aeaf0;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btnPag:hover {
+  background-color: #74d3da;
+}
+
+.btnPag:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.form-group {
+  position: relative; /* Para posicionar las sugerencias relativas al input */
+}
+
+#sugerencias {
+  position: absolute;
+  top: 100%; /* Muestra las sugerencias justo debajo del input */
+  left: 0;
+  width: 100%; /* Asegura que las sugerencias tengan el mismo ancho que el input */
+  border: 1px solid #ccc;
+  background-color: white;
+  z-index: 1000; /* Para que las sugerencias aparezcan encima de otros elementos */
+}
+
+.producto-sugerido {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.producto-sugerido:hover {
+  background-color: #f0f0f0;
+}
+
+/* DEMANDA */
+
+.demand-section {
+  width: 60%;
+}
+
+.demand-section h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.demand-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.aumento {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: #90ff9d;
+}
+
+.disminucion {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: #ff9090;
+}
+
+.demand-card {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.demanda-footer {
+  width: 92.5%;
+  margin-left: 4rem;
+}
+.color-ganancia {
+  color: green; /* Color para ganancias */
+}
+
+.color-gastos {
+  color: red; /* Color para gastos */
+}
+
+.color-resultado {
+  color: blue; /* Color para el resultado */
+}

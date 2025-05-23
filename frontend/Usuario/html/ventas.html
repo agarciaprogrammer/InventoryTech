@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <h3>TOP Productos más vendidos</h3>
+            <button
+              id="helpButtonTop"
+              style="
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              "
+              title="Ayuda"
+            >
+              ?
+            </button>
+          </div>
+          <div
+            id="helpTextTop"
+            style="display: none; margin-top: 10px; color: #555"
+          ></div>
+        </div>
+        <label for="fecha1">Desde</label>
+        <input type="date" id="fecha1" name="fecha1" />
+        <br />
+        <label for="fecha2">Hasta</label>
+        <input type="date" id="fecha2" name="fecha2" />
+        <br />
+        <br />
+        <table id="table-top" class="ventas-top">
+          <button class="export-btn btn-top">Periodo</button>
+          <thead>
+            <th>Seleccionar</th>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>% de ventas del periodo</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <br />
+        <br />
+        <br />
+        <div class="sales-section">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <h3>Ventas</h3>
+            <button
+              id="helpButtonVentas"
+              style="
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              "
+              title="Ayuda"
+            >
+              ?
+            </button>
+          </div>
+          <div
+            id="helpTextVentas"
+            style="display: none; margin-top: 10px; color: #555"
+          ></div>
+          <div class="search-container">
+            <a href="#">filtros</a>
+          </div>
+        </div>
+        <table id="table" class="ventas">
+          <thead>
+            <th>Seleccionar</th>
+            <th>ID Venta</th>
+            <th>Fecha</th>
+            <th>Total $</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="pagination">
+          <button class="btnPag" id="prevPage">Prev</button>
+          <button class="btnPag" id="nextPage">Next</button>
+        </div>
+
+        <h4>Detalles de la venta seleccionada</h4>
+        <table id="table" class="detalles">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="../js/paginacion.js"></script>
+    <script src="../js/ventasFront.js"></script>
+    <script src="../js/salir.js"></script>
+    <script>
+      document.getElementById("helpButtonTop").addEventListener("click", () => {
+        const helpTextTop = document.getElementById("helpTextTop");
+
+        helpTextTop.innerHTML = ` En esta pantalla, debes poner la fecha de inicio y fin para ver los 5 productos más vendidos. <br/> Si no pones fechas, se calcula desde el inicio de las operaciones de tu supermercado.`;
+
+        if (helpTextTop.style.display === "none") {
+          helpTextTop.style.display = "block";
+        } else {
+          helpTextTop.style.display = "none";
+        }
+      });
+      document
+        .getElementById("helpButtonVentas")
+        .addEventListener("click", () => {
+          const helpTextVentas = document.getElementById("helpTextVentas");
+          helpTextVentas.innerHTML = `Puedes ver las ventas realizadas por tu supermercado. <br/> Para ver los detalles de una venta, haz click en el cuadradito seleccionador.`;
+
+          if (helpTextVentas.style.display === "none") {
+            helpTextVentas.style.display = "block";
+          } else {
+            helpTextVentas.style.display = "none";
+          }
+        });
+    </script>
+  </body>
+</html>

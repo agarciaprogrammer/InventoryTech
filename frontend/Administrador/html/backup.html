@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="/frontend/Usuario/css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="administrador.html">InventoryTech</a>
+      <ul>
+        <li><a href="usuarios.html">Usuarios</a></li>
+        <li><a href="backup.html">Backup</a></li>
+        <li><a href="bitacora.html">Bitacora</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Administrador</h1>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Gestion de Backup</h3>
+        </div>
+        <button class="export-btn backup">Crear Backup</button>
+        <button class="export-btn restaurar">Restaurar Base de datos</button>
+        <div class="card-content-venta">
+          <table id="table">
+            <thead>
+              <th>Seleccionar</th>
+              <th>Fecha</th>
+              <th>Nombre</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../js/backup.js"></script>
+    <script src="../js/salir.js"></script>
+  </body>
+</html>

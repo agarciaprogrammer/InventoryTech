@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - InventoryTech</title>
+    <link rel="stylesheet" href="../css/home.css" />
+  </head>
+  <body>
+    <div class="vertical-navbar">
+      <a href="./home.html">InventoryTech</a>
+      <ul>
+        <li><a href="./demanda.html">Demanda</a></li>
+        <li><a href="./stock.html">Stock</a></li>
+        <li><a href="./ventas.html">Ventas</a></li>
+        <li><a href="./riesgo.html">Riesgo</a></li>
+        <li><a href="./balance.html">Balance</a></li>
+        <li><a href="/landinghome.html">Salir</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="horizontal-navbar">
+        <h1>Dashboard</h1>
+        <a class="btn" href="nuevaventa.html">Nueva Venta</a>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div style="display: flex; align-items: center; gap: 10px">
+            <h3>Riesgo Diario</h3>
+            <button
+              id="helpButton"
+              style="
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+              "
+              title="Ayuda"
+            >
+              ?
+            </button>
+          </div>
+          <div
+            id="helpText"
+            style="display: none; margin-top: 10px; color: #555"
+          ></div>
+        </div>
+
+        <div class="card-content">
+          <p>
+            El riesgo de perdidas de hoy (<label id="hoy"></label>) es de <strong>$<label id="perdidashoy"></label></strong>  por vencimiento de
+            productos
+          </p>
+          <p>
+            El riesgo de perdidas de mañana (<label id="mañana"></label>) es de <strong>$<label id="perdidasmañana"></label></strong>  por vencimiento de
+            productos
+          </p>
+        </div>
+
+        <div class="card-footer">
+          <h3>Vencimientos cercanos</h3>
+          <div class="search-container">
+            <input type="text" placeholder="Buscar productos..." />
+            <a href="#">filtros</a>
+          </div>
+        </div>
+
+        <table id="table">
+          <thead>
+            <th>Seleccionar</th>
+            <th>Codigo de Barras</th>
+            <th>Producto</th>
+            <th>Precio Unitario</th>
+            <th>Stock</th>
+            <th>Vencimiento</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="pagination"></div>
+          <button class="btnPag" id="prevPage">Prev</button>
+          <button class="btnPag" id="nextPage">Next</button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/riesgoFront.js"></script>
+    <script src="../js/salir.js"></script>
+    <script>
+      document.getElementById("helpButton").addEventListener("click", () => {
+        const helpText = document.getElementById("helpText");
+        helpText.innerHTML = `Se calcula el total de pérdidas si no se venden estos productos con vencimiento cercano.`;
+
+        if (helpText.style.display === "none") {
+          helpText.style.display = "block";
+        } else {
+          helpText.style.display = "none";
+        }
+      });
+    </script>
+
+  </body>
+</html>
