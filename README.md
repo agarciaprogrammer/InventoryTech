@@ -41,13 +41,6 @@ El objetivo principal es **reducir pérdidas** y **maximizar ventas** mediante d
 - 📁 Backup y restauración de base de datos
 - 🔎 Búsqueda avanzada de productos y ventas
 
-
-## 📷 Capturas de pantalla
-
-> (Agregá acá imágenes de las pantallas más representativas: dashboard, tabla de stock, alertas, login, etc.)
-
----
-
 ## 🚀 Cómo ejecutar el proyecto
 
 ```bash
