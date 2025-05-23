@@ -25,8 +25,6 @@ El objetivo principal es **reducir pérdidas** y **maximizar ventas** mediante d
 | `Python` + `Pandas`, `Sklearn` | Lógica predictiva (IA)|
 | `SQL Server`   | Base de datos relacional              |
 | `Express.js`   | Framework del backend                 |
-| `Docker` (opcional) | Contenedores (si aplicás)        |
-| `CI/CD`        | Pruebas automatizadas (si tenés)      |
 
 ---
 
